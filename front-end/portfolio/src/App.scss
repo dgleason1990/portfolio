@@ -1,0 +1,55 @@
+$backgroundcolor: lightblue;
+
+//Navbar
+.navbar{
+  display: flex;
+  justify-content: space-around;
+}
+
+//Home
+.home{
+  .title{
+    height: 100vh;
+    background-color: $backgroundcolor;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    img{
+      width: 25%;
+      border-radius: 100%
+    }
+  }
+  .summary{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around
+  }
+  .skills{
+    height: 100vh;
+    background-color: $backgroundcolor;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    img{
+      width: 250px;
+    }
+  }
+  .recentWork{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .funfacts{
+    height: 100vh;
+    background-color: $backgroundcolor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
