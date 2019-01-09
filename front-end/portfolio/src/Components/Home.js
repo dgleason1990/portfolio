@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 
 export default class Home extends Component {
-    randomFact = ()=>{
 
+    randomFact = ()=>{
     }
   render() {
     return (
       <div className='home'>
-        <div className='title'>
+        <div className='title' data-aos='flip-left' data-aos-duration='1000'>
             <h1> Web Developer Extraordinaire </h1>
             <h2> I am a full stack developer that loves what he does!</h2>
             <img src='/Assets/myAvatar.svg' alt='David Gleason'/>
         </div>
-        <div className='summary'>
+        <div className='summary' data-aos='flip-right' data-aos-duration='1000'>
             <h2> Hi there! I'm David, thanks for visiting my page and taking the time to scroll down here!</h2>
             <h3> 
                 Since you're down here reading here's a bit about me: <br/>
@@ -25,53 +25,56 @@ export default class Home extends Component {
                 On this site you can find some previous projects that I've worked on. In the top right corner you can reach me.
             </h3>
         </div>
-        <div className='skills'>
+        <div className='skills' data-aos='flip-left' data-aos-duration='1000'>
+            <h1> Developer Skills </h1>
             <div>
-                <img src='/Assets/frontend.png' alt='Front-End'/>
-                <h2>Front-End Developer</h2>
-                <ul>
-                    <li> HTML </li>
-                    <li> CSS </li>
-                    <li> SCSS </li>
-                    <li> Javascript </li>
-                    <li> React </li>
-                    <li> Node.js </li>
-                    <li> REST API </li>
-                    <li> GIT </li>
-                </ul>
-            </div>
-            <div>
-                <img src='/Assets/database.png' alt='Server'/>
-                <h2>Back-End Developer</h2>
-                <ul>
-                    <li> Express.js </li>
-                    <li> MySQL </li>
-                    <li> MongoDB </li>
-                    <li> Mongoose </li>
-                    <li> Node.js </li>
-                    <li> REST API </li>
-                    <li> Postman </li>
-                    <li> Database Structures </li>
-                </ul>
-            </div>
-            <div>
-                <img src='/Assets/future.png' alt='Future Logo'/>
-                <h2>Future Languages</h2>
-                <ul>
-                    <li>
-                        To be continued...
-                    </li>
-                </ul>
+                <div data-aos='zoom-in' data-aos-delay='750'>
+                    <img src='/Assets/frontend.png' alt='Front-End'/>
+                    <h2>Front-End Developer</h2>
+                    <ul>
+                        <li> HTML </li>
+                        <li> CSS </li>
+                        <li> SCSS </li>
+                        <li> Javascript </li>
+                        <li> React </li>
+                        <li> Node.js </li>
+                        <li> REST API </li>
+                        <li> GIT </li>
+                    </ul>
+                </div>
+                <div data-aos='zoom-in' data-aos-delay='750'>
+                    <img src='/Assets/database.png' alt='Server'/>
+                    <h2>Back-End Developer</h2>
+                    <ul>
+                        <li> Express.js </li>
+                        <li> MySQL </li>
+                        <li> MongoDB </li>
+                        <li> Mongoose </li>
+                        <li> Node.js </li>
+                        <li> REST API </li>
+                        <li> Postman </li>
+                        <li> Database Structures </li>
+                    </ul>
+                </div>
+                <div data-aos='zoom-in' data-aos-delay='750'>
+                    <img src='/Assets/future.png' alt='Future Logo'/>
+                    <h2>Future Languages</h2>
+                    <ul>
+                        <li>
+                            To be continued...
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div className='recentWork'>
+        <div className='recentWork' data-aos='flip-right' data-aos-duration='1000'>
             <h1> My Recent Work </h1>
             <div>
                 <h2> Listy </h2>
                 <h2> HairCo </h2>
             </div>
         </div>
-        <div className='funfacts'> 
+        <div className='funfacts' data-aos='flip-left' data-aos-duration='1000'> 
             <h1> Some fun facts about me! </h1>
             <ul>
                 <li> I rode a hippo once </li>

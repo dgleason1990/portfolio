@@ -1,16 +1,47 @@
-$backgroundcolor: lightblue;
+$color1: #E27D60;
+$color2: rgb(149,203,201);
+$color3: #E8A87C;
+$color4: #C38D9E;
+$color5: #41B3A3;
+
+// for color schemes: https://visme.co/blog/website-color-schemes/
+
+// App
+.App{
+  background-color: $color5;
+}
 
 //Navbar
 .navbar{
+  background-color: $color3;
+  width: 100vw;
+  height: 8vw;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  a{
+    padding: 15px;
+    border: black thin solid;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  a:hover{
+      background-color: black;
+  }
+  a:link{
+    text-decoration:none;
+  }
+  a:visited{
+    text-decoration: none;
+    color: white;
+  }
 }
 
 //Home
 .home{
   .title{
     height: 100vh;
-    background-color: $backgroundcolor;
+    background-color: $color2;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -21,6 +52,7 @@ $backgroundcolor: lightblue;
     }
   }
   .summary{
+    background-color: $color3;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -29,15 +61,27 @@ $backgroundcolor: lightblue;
   }
   .skills{
     height: 100vh;
-    background-color: $backgroundcolor;
+    background-color: $color2;
     display: flex;
-    justify-content: space-evenly;
-    margin: 10px;
-    img{
-      width: 250px;
+    flex-direction: column;
+    align-items: center;
+    div{
+      display: flex;
+      div{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+        background-color: $color5;
+        img{
+          width: 250px;
+        }
+      }
     }
   }
   .recentWork{
+    background-color: $color3;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -46,10 +90,47 @@ $backgroundcolor: lightblue;
   }
   .funfacts{
     height: 100vh;
-    background-color: $backgroundcolor;
+    background-color: $color2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+  }
+}
+
+// Contacts Page
+.contact{
+  height: 100vw;
+  background-color: $color2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div{
+    margin: 30px;
+    padding: 30px;
+    background-color: $color5;
+    p{
+      margin: 0;
+    }
+    form{
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      div{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        div{
+          margin: 25px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .message{
+        width: 100%;
+        height: 100px;
+      }
+    }
   }
 }
