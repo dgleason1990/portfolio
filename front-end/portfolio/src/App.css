@@ -151,7 +151,6 @@
 }
 
 .contact {
-  height: 100vw;
   background-color: #95cbc9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,8 +165,6 @@
 }
 
 .contact div {
-  margin: 30px;
-  padding: 30px;
   background-color: #41B3A3;
 }
 
@@ -211,5 +208,10 @@
 .contact div form .message {
   width: 100%;
   height: 100px;
+}
+
+.particles {
+  width: 100vw;
+  height: 100%;
 }
 /*# sourceMappingURL=App.css.map */

@@ -5,7 +5,8 @@ import Home from './Components/Home';
 import './App.css';
 import Contact from './Components/Contact';
 import AOS from 'aos';
-import '../node_modules/aos/dist/aos.css'
+import '../node_modules/aos/dist/aos.css';
+import Particles from 'react-particles-js';
 
 class App extends Component {
   componentDidMount(){
