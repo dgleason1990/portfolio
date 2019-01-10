@@ -16,22 +16,17 @@ export default class Particle extends Component {
             }
           },
           color: {
-            value: "#ffffff"
+            // value: "#41B3A3"
           },
           shape: {
             type: "circle",
-            stroke: {
-              width: 2,
-              color: "#000000"
-            },
+            // stroke: {
+            //   width: 2,
+            //   color: "#000000"
+            // },
             polygon: {
               nb_sides: 4
             },
-            image: {
-              src: "img/github.svg",
-              width: 100,
-              height: 100
-            }
           },
           opacity: {
             value: 0.4008530152163807,
@@ -44,7 +39,7 @@ export default class Particle extends Component {
             }
           },
           size: {
-            value: 1.5,
+            value: 3,
             random: true,
             anim: {
               enable: false,
@@ -62,8 +57,8 @@ export default class Particle extends Component {
           },
           move: {
             enable: true,
-            speed: 6,
-            direction: "none",
+            speed: 2,
+            direction: "top",
             random: false,
             straight: false,
             out_mode: "out",

@@ -13,32 +13,71 @@ $color5: #41B3A3;
 
 //Navbar
 .navbar{
+  position: fixed;
+  z-index: 10;
+  box-shadow: 0 0 3px black;
   background-color: $color3;
   width: 100vw;
-  height: 8vw;
+  height: 5vw;
+  color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  a{
-    padding: 15px;
-    border: black thin solid;
-    border-radius: 50%;
+  .onHome{
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    background-color: black;
+  }
+  .notOnHome{
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-right: black thin solid;
+    border-left:black thin solid;
     cursor: pointer;
   }
-  a:hover{
+  .notOnHome:hover{
+    background-color: black;
+  }
+  .onContact{
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    background-color: black;
+  }
+  .notOnContact{
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-right: black thin solid;
+    border-left:black thin solid;
+    cursor: pointer;
+  }
+  .notOnContact:hover{
       background-color: black;
-  }
-  a:link{
-    text-decoration:none;
-  }
-  a:visited{
-    text-decoration: none;
-    color: white;
   }
 }
 
 //Home
 .home{
+  padding-top: 5vw;
   .title{
     height: 100vh;
     background-color: $color2;
@@ -57,7 +96,12 @@ $color5: #41B3A3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around
+    justify-content: center;
+    h3{
+      margin-left: 10vw;
+      margin-right: 10vw;
+      margin-top: 5vw;
+    }
   }
   .skills{
     height: 100vh;
@@ -68,6 +112,9 @@ $color5: #41B3A3;
     div{
       display: flex;
       div{
+        align-items: center;
+        width: 300px;
+        border-radius: 10%;
         display: flex;
         flex-direction: column;
         padding: 10px;
@@ -100,13 +147,14 @@ $color5: #41B3A3;
 
 // Contacts Page
 .contact{
-  // height: 100vw;
-  background-color: $color2;
+  padding-top: 5vw;
+  background: linear-gradient(to right, $color2, $color3);
   display: flex;
   flex-direction: column;
   align-items: center;
-  div{
-    background-color: $color5;
+  .submission{
+    margin-top: 8vw;
+    position: absolute;
     p{
       margin: 0;
     }
@@ -136,5 +184,5 @@ $color5: #41B3A3;
 // Animation
 .particles{
   width: 100vw;
-  height: 100%
+  height: 100vh;
 }

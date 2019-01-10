@@ -7,7 +7,7 @@ export default class Contact extends Component {
     return (
       <div className='contact' data-aos='flip-left' data-aos-duration='1000'>
         <Particle />
-        <div>
+        <div className='submission'>
             <p>Thanks for taking the time to visit my site and reach out to me! What can I do for you?</p>
               <form>
                 <div>

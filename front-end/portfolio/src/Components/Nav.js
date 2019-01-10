@@ -1,16 +1,41 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { withRouter } from 'react-router';
 
-export default class Nav extends Component {
-    onClick=()=>{
-        this.props.history.push('/contact')
-    }
+class Nav extends Component {
+state={
+  classNameHome:'onHome',
+  classNameContact:'notOnContact',
+  classNameNavbar: 'navbar'
+}
+
+onHomeChange=()=>{
+    this.setState({
+      classNameHome: 'onHome',
+      classNameContact: 'notOnContact'
+    })
+  this.props.history.push('/home')
+}
+
+onContactChange=()=>{
+    this.setState({
+      classNameContact: 'onContact',
+      classNameHome: 'notOnHome'
+    })
+  this.props.history.push('/contact')
+}
+
+componentDidMount(){
+  window.addEventListener('scroll', (e) => {})
+}
+
   render() {
     return (
-      <div className="navbar">
-        <Link to='/home'> David Gleason's Page </Link>
-        <Link to='/contact'> Want to Talk </Link>
+      <div className={this.state.classNameNavbar}>
+        <div className={this.state.classNameHome} to='/home' onClick={this.onHomeChange}> David Gleason's Page </div>
+        <div className={this.state.classNameContact} to='/contact' onClick={this.onContactChange}> Want to Talk </div>
       </div>
     )
   }
 }
+
+export default withRouter(Nav);
