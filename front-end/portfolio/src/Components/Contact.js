@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Particle from './Particle';
-// import Particles from "react-particles-js";
 
 export default class Contact extends Component {
   render() {

@@ -25,8 +25,47 @@ onContactChange=()=>{
 }
 
 componentDidMount(){
-  window.addEventListener('scroll', (e) => {})
-}
+  let newPos = []; 
+  window.addEventListener('scroll', () => {
+    console.log(newPos[newPos.length-1] < window.scrollY)
+    // console.log(newPos)
+    // console.log(window.scrollY)
+    console.log(window.scrollY < 80)
+    newPos.push(window.scrollY);
+    if( window.scrollY < 80 ){ 
+      this.setState({
+        classNameNavbar: 'navbar'
+      })
+    } else {
+      this.setState({
+        classNameNavbar: 'navbarChanged'
+    })}
+    // else if (newPos[newPos.length-1] < window.scrollY){
+    //   newPos = [];
+    //   this.setState({
+    //     classNameNavbar: 'navbarChanged'
+    //   })
+    // }
+    // else if ((newPos[0] - window.scrollY)  === 10 ){
+    //   this.setState({
+    //     classNameNavbar: 'navbar'
+    //     })}
+      })
+  }
+
+    // {
+    //   if (newPos[newPos.length-1] < window.scrollY){
+    //     newPos = [];
+    //     console.log('hey hey')
+    //     this.setState({
+    //       classNameNavbar: 'navbarChanged'
+    //     })
+    //   } 
+      // else if ((newPos[0] - window.scrollY)  === 10 ){
+      //   this.setState({
+      //     classNameNavbar: 'navbar'
+      //   })
+      // }
 
   render() {
     return (

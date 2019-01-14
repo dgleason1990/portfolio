@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link, Switch, Redirect, Route } from 'react-router-dom';
+import { Switch, Redirect, Route } from 'react-router-dom';
 import Nav from './Components/Nav';
 import Home from './Components/Home';
 import './App.css';
 import Contact from './Components/Contact';
 import AOS from 'aos';
 import '../node_modules/aos/dist/aos.css';
-import Particles from 'react-particles-js';
 
 class App extends Component {
   componentDidMount(){
