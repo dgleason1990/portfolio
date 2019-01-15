@@ -27,32 +27,29 @@ onContactChange=()=>{
 componentDidMount(){
   let newPos = []; 
   window.addEventListener('scroll', () => {
-    console.log(newPos[newPos.length-1] < window.scrollY)
-    // console.log(newPos)
-    // console.log(window.scrollY)
-    console.log(window.scrollY < 80)
     newPos.push(window.scrollY);
+    console.log(newPos[0]-window.scrollY)
     if( window.scrollY < 80 ){ 
       this.setState({
         classNameNavbar: 'navbar'
       })
-    } else {
+    } 
+    else if (newPos[newPos.length-2] < window.scrollY){
+      console.log('yes')
+      newPos = [];
       this.setState({
         classNameNavbar: 'navbarChanged'
-    })}
-    // else if (newPos[newPos.length-1] < window.scrollY){
-    //   newPos = [];
-    //   this.setState({
-    //     classNameNavbar: 'navbarChanged'
-    //   })
-    // }
-    // else if ((newPos[0] - window.scrollY)  === 10 ){
-    //   this.setState({
-    //     classNameNavbar: 'navbar'
-    //     })}
+      })
+    }
+    else if ((newPos[0] - window.scrollY) > 50 ){
+      this.setState({
+        classNameNavbar: 'navbar'
+        })
+      }
       })
   }
 
+  
     // {
     //   if (newPos[newPos.length-1] < window.scrollY){
     //     newPos = [];
