@@ -12,7 +12,7 @@ app.use(express.static('public', {
     setHeaders: function(res, path) { res.set("Cache-Control", "no-cache"); }
 }));
 
-app.use(express.static(path.join(__dirname, "/build")));
+app.use(express.static(path.join(__dirname, "front-end/build")));
 
 app.post('/contact', (req,res)=>{
     let transporter = nodemailer.createTransport({
