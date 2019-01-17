@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, "front-end/build")));
 
+app.get('/',(req,res)=>{res.sendFile(path.join(__dirname+'/index.html'));});
+
 app.post('/contact', (req,res)=>{
     let transporter = nodemailer.createTransport({
       host:'smtp.gmail.com',
