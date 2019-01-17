@@ -18,7 +18,7 @@ app.use(express.static(__dirname + '/front-end/build', {
 
 app.use(express.static(path.join(__dirname, "front-end/build")));
 
-app.get('/',(req,res)=>{res.sendFile(path.join(__dirname+'/index.html'));});
+// app.get('/',(req,res)=>{res.sendFile(path.join(__dirname+'/index.html'));});
 
 app.post('/contact', (req,res)=>{
     let transporter = nodemailer.createTransport({
