@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -11,6 +12,7 @@ app.use(express.static('public', {
     setHeaders: function(res, path) { res.set("Cache-Control", "no-cache"); }
 }));
 
+app.use(express.static(path.join(__dirname, "/build")));
 
 app.post('/contact', (req,res)=>{
     let transporter = nodemailer.createTransport({
