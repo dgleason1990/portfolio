@@ -28,13 +28,12 @@ export default class Contact extends Component {
 
   handleSubmission= (e)=>{
     e.preventDefault();
-    console.log(this.state)
     let init = {
       method: 'POST',
       body: JSON.stringify(this.state),
       headers: {"content-type": "application/json"}
     }
-    fetch('http://localhost:8080/contact', init)
+    fetch('https://david-gleasons-portfolio.herokuapp.com/contact', init)
     .then(res=>console.log(res))
     .catch(err=> console.log(err))
   }

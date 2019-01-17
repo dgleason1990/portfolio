@@ -52,7 +52,7 @@ app.post('/contact', (req,res)=>{
       console.log('Message was Sent');
       console.log(info)
     })
-    res.send('thanks')
+    res.send('Message has been sent')
 })
 
 
