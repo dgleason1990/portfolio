@@ -34,7 +34,7 @@ export default class Contact extends Component {
       body: JSON.stringify(this.state),
       headers: {"content-type": "application/json"}
     }
-    fetch('http://localhost:8080/contact', init)
+    fetch('http://localhost:8080/contact' || 'http://'+process.env.PORT+'/contacts', init)
     .then(res=>console.log(res))
     .catch(err=> console.log(err))
   }

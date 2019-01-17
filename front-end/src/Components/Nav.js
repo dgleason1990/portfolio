@@ -49,21 +49,6 @@ componentDidMount(){
       })
   }
 
-  
-    // {
-    //   if (newPos[newPos.length-1] < window.scrollY){
-    //     newPos = [];
-    //     console.log('hey hey')
-    //     this.setState({
-    //       classNameNavbar: 'navbarChanged'
-    //     })
-    //   } 
-      // else if ((newPos[0] - window.scrollY)  === 10 ){
-      //   this.setState({
-      //     classNameNavbar: 'navbar'
-      //   })
-      // }
-
   render() {
     return (
       <div className={this.state.classNameNavbar}>
