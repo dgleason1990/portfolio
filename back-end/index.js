@@ -12,9 +12,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //     setHeaders: function(res, path) { res.set("Cache-Control", "no-cache"); }
 // }));
 
-app.use(express.static(__dirname, '/front-end/build', {
-  setHeaders: function(res, path) { res.set("Cache-Control", "no-cache"); }
-}));
+app.use(express.static(__dirname + '/front-end/build'));
+
+// , {
+//   setHeaders: function(res, path) { res.set("Cache-Control", "no-cache"); }
+// }
 
 // app.use(express.static(path.join(__dirname, '/front-end/build'), {
 //   setHeaders: function(res, path) { res.set("Cache-Control", "no-cache"); }
