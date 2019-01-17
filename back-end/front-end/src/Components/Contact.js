@@ -34,10 +34,12 @@ export default class Contact extends Component {
       body: JSON.stringify(this.state),
       headers: {"content-type": "application/json"}
     }
-    fetch('http://localhost:8080/contact' || 'http://'+ process.env.PORT +'/contacts', init)
+    fetch('https://david-gleasons-portfolio.herokuapp.com/contact', init)
     .then(res=>console.log(res))
     .catch(err=> console.log(err))
   }
+
+  // 'http://localhost:8080/contact' || 'http://'+ process.env.PORT +'/contacts'
   render() {
     return (
       <div className='contact' data-aos='flip-left' data-aos-duration='1000'>
