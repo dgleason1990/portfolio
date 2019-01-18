@@ -4,27 +4,12 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const path = require('path');
+const password = require('./production-headers')
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(express.static('public', {
-//     setHeaders: function(res, path) { res.set("Cache-Control", "no-cache"); }
-// }));
-
 app.use(express.static(__dirname + '/front-end/build'));
-
-// , {
-//   setHeaders: function(res, path) { res.set("Cache-Control", "no-cache"); }
-// }
-
-// app.use(express.static(path.join(__dirname, '/front-end/build'), {
-//   setHeaders: function(res, path) { res.set("Cache-Control", "no-cache"); }
-// }));
-
-// app.use(express.static(path.join(__dirname, "front-end/build")));
-
-// app.get('/',(req,res)=>{res.sendFile(path.join(__dirname+'/index.html'));});
 
 app.post('/contact', (req,res)=>{
     let transporter = nodemailer.createTransport({
@@ -33,7 +18,7 @@ app.post('/contact', (req,res)=>{
       secure: false,
       auth:{
         user: 'david.gleason.portfolio@gmail.com',
-        pass: ';LpJ/8NFLD8qn[]_'
+        pass: password
       },
       tls:{
         rejectUnauthrized: false
