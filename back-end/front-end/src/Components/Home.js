@@ -71,7 +71,7 @@ export default class Home extends Component {
             <h1> My Recent Work </h1>
             <div>
                 <div>
-                    <h2> Listy </h2>
+                    <h2> <a href='https://hairco.herokuapp.com/'>Listy</a> </h2>
                     <p> 
                         Listy was a paired programming page that I worked on. 
                         The site starts with a request to an API called spoonacular.
@@ -91,7 +91,7 @@ export default class Home extends Component {
                     </p>
                 </div>
                 <div>
-                    <h2 className='hairco'> HairCo </h2>
+                    <h2 className='hairco'> <a href='https://hairco.herokuapp.com/'> HairCo </a> </h2>
                     <p>
                         HairCo is a solo project that was used to explore all facets of a full-stack website.
                         The aim of the project was to connect clients to stylists in an easy to use application.
