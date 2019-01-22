@@ -99,16 +99,16 @@ export default class Home extends Component {
                         <h2> <a href='https://listy-ingredients.herokuapp.com'>Listy </a> <p onClick={this.close}> X </p></h2>
                         <p> 
                         Listy was a paired programming page that I worked on. 
-                        The site starts with a request to an API called spoonacular.
-                        Spoonacular receives requests divided by a list of ingredients provided and sends back several recipes.
+                        Listy starts with a request to an API called Spoonacular.
+                        Spoonacular receives requests of ingredients provided and sends back several recipes.
                         Listy then takes the recipes and displays them on the page. 
                         When the user clicks on one of the items an ID is sent to Spoonacular again and displays cooking data on a seperate page.
                         Listy is also hands free with a speech-to-text feature. 
                         This feature listens and translates speech-to-text.
                         Using simple array methods Listy parses the information and sends the API request. 
-                        A secondary feature was adding a text-to-speech feature on the cooking data page.
+                        A secondary feature added is text-to-speech on the cooking data page.
                         This took the recipe instructions, converted it to an mp3 file, and stored it locally.
-                        Our front-end would thenpoint to the audio file created and would play it back for the users.
+                        Our front-end would then point to the audio file created and would play it back for the users.
                         We had a bit of fun with creating the audio files and hard coded several scripts that would randomly generate and be converted to mp3 files
                         with the recipe instructions. 
 
@@ -146,7 +146,7 @@ export default class Home extends Component {
                             
                             The client side would allow clients to display stylists closest to them by checking HairCo's database.
                             The client's address would be sent to a google API which would return a latitude and longitude and 
-                            compare it to everything within the database. Retrieved data would then be displayed on an easy to use
+                            compare it to all locations within the database. Retrieved data would then be displayed on an easy to use
                             Google maps component where clients could view information and choose their preferred stylist.
                             By selecting the stylist they would be directed to a page that would allow clients to directly contact 
                             stylists using Twilio - a cloud based service which sends texts. 
