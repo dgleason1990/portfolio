@@ -44,8 +44,8 @@ export default class Home extends Component {
                 with a technical skill. After much consideration and a bit of back and forth between programs I chose web development! (Yay!)
                 What's more difficult and technical than programming? Am I right?
                 I've always loved computers and dabbled here and there with programming at computer camp, who needs the outdoors anyways?
-                Now that I'm all grown up with a bcomm degree under my belt and a web development diploma I'm ready to take on the world! 
-                On this site you can find some previous projects that I've worked on. In the top right corner you can reach me.
+                Now that I'm all grown up with my Ryerson University degree under my belt and a web development diploma I'm ready to take on the world! 
+                On this site you can find some previous projects that I've worked on. In the top left corner you can reach me.
             </h3>
         </div>
         <div className='skills' data-aos='fade-zoom-in' data-aos-duration='1000'>

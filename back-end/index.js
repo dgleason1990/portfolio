@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const path = require('path');
-const password = require('./production-headers')
+// const password = require('./production-headers')
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -12,13 +12,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/front-end/build'));
 
 app.post('/contact', (req,res)=>{
+  console.log(req.body)
     let transporter = nodemailer.createTransport({
       host:'smtp.gmail.com',
       port: 587,
       secure: false,
       auth:{
         user: 'david.gleason.portfolio@gmail.com',
-        pass: password
+        pass: ';LpJ/8NFLD8qn[]_'
       },
       tls:{
         rejectUnauthrized: false
