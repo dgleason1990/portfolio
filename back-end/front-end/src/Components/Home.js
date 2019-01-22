@@ -117,7 +117,7 @@ export default class Home extends Component {
                     </div>
                 </div>
                 <div>
-                    <h2 className='haircobutton' onClick={this.openhairco}>  <img src='./Assets/button.jpg' alt='Button Image'/> HairCo </h2>
+                    <h2 className='haircobutton' onClick={this.openhairco}>  <img src='./Assets/button.png' alt='Button Image'/> HairCo </h2>
                     <div className={this.state.hairco}>
                         <h2 className='hairco'> <a href='https://hairco.herokuapp.com/'> HairCo </a><p onClick={this.close}> X </p> </h2>
                         <p>

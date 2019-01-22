@@ -242,6 +242,7 @@
 }
 
 .home .recentWork div div .listybutton {
+  border-radius: 25%;
   color: #f33;
   font-family: 'Lobster';
   background-color: white;
@@ -250,7 +251,9 @@
 }
 
 .home .recentWork div div .haircobutton {
-  width: 20vw;
+  border-radius: 25%;
+  background-color: white;
+  padding: 10px;
   border: none;
   color: #eed38e;
   font-size: 1.3rem;
@@ -268,8 +271,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  outline: none;
-  width: 300px;
   margin-top: 25px;
   cursor: pointer;
 }
@@ -278,6 +279,7 @@
   position: absolute;
   z-index: -1;
   width: 300px;
+  border-radius: 25%;
 }
 
 .home .recentWork div div .closed {
@@ -322,7 +324,7 @@
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  top: 175px;
+  top: 250px;
   width: 80%;
   background: #E27D60;
   padding: 15px;

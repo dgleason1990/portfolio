@@ -145,6 +145,7 @@ $color5: #41B3A3;
           margin-bottom: 100px;
         }
         .listybutton{
+          border-radius: 25%;
           color: #f33;
           font-family: 'Lobster';
           background-color: white;
@@ -152,7 +153,9 @@ $color5: #41B3A3;
           cursor: pointer;
         }
         .haircobutton{
-          width: 20vw;
+          border-radius: 25%;
+          background-color: white;
+          padding: 10px;
           border: none;
           color: rgb(238, 211, 142);
           font-size: 1.3rem;
@@ -161,14 +164,14 @@ $color5: #41B3A3;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          outline: none;
-          width: 300px;
+          // outline: none;
           margin-top: 25px;
           cursor: pointer;
           img{
             position: absolute;
             z-index: -1;
             width: 300px;
+            border-radius:25%;
           }
         }
         .closed{
@@ -200,7 +203,7 @@ $color5: #41B3A3;
           z-index: 10;
           display: flex;
           position: fixed;
-          top: 175px;
+          top: 250px;
           width: 80%;
           background: $color1;
           padding: 15px;
