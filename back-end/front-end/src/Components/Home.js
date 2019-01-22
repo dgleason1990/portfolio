@@ -71,7 +71,7 @@ export default class Home extends Component {
             <h1> My Recent Work </h1>
             <div>
                 <div>
-                    <h2> <a href='https://hairco.herokuapp.com/'>Listy</a> </h2>
+                    <h2> <a href='https://listy-ingredients.herokuapp.com/home'>Listy</a> </h2>
                     <p> 
                         Listy was a paired programming page that I worked on. 
                         The site starts with a request to an API called spoonacular.
