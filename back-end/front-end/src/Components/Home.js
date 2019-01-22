@@ -1,6 +1,29 @@
 import React, { Component } from 'react'
 
 export default class Home extends Component {
+    state={
+        listy: 'closed',
+        hairco: 'closed'
+    }
+
+    openListy = ()=>{
+        this.setState({
+            listy: 'listyOpen'
+        })
+    }
+
+    openhairco = () => {
+        this.setState({
+            hairco: 'haircoOpen'
+        })
+    }
+
+    close = () =>{
+        this.setState({
+            listy: 'closed',
+            hairco: 'closed'
+        })
+    }
 
     randomFact = ()=>{
     }
@@ -69,10 +92,12 @@ export default class Home extends Component {
         </div>
         <div className='recentWork' data-aos='fade-zoom-in' data-aos-duration='1000'>
             <h1> My Recent Work </h1>
-            <div>
+            <div> 
                 <div>
-                    <h2> <a href='https://listy-ingredients.herokuapp.com'>Listy</a> </h2>
-                    <p> 
+                    <h2 className='listybutton' onClick={this.openListy}> Listy </h2>
+                    <div className={this.state.listy}>
+                        <h2> <a href='https://listy-ingredients.herokuapp.com'>Listy </a> <p onClick={this.close}> X </p></h2>
+                        <p> 
                         Listy was a paired programming page that I worked on. 
                         The site starts with a request to an API called spoonacular.
                         Spoonacular receives requests divided by a list of ingredients provided and sends back several recipes.
@@ -88,49 +113,53 @@ export default class Home extends Component {
                         with the recipe instructions. 
 
                         My contribution was creating the REACT components, REST API requests, and the text-to-speech/speech-to-text features.
-                    </p>
+                        </p>
+                    </div>
                 </div>
                 <div>
-                    <h2 className='hairco'> <a href='https://hairco.herokuapp.com/'> HairCo </a> </h2>
-                    <p>
-                        HairCo is a solo project that was used to explore all facets of a full-stack website.
-                        The aim of the project was to connect clients to stylists in an easy to use application.
-                        The tools used within this application were the following:
-                        <div className='list'>
-                            <ul>
-                                <li> REACT.js </li>
-                                <li> Node.js </li>
-                                <li> Express.js </li>
-                                <li> REST API </li>
-                                <li> MongoDB </li>
-                                <li> JSONWebToken </li>
-                            </ul>
-                            <ul>
-                                <li> Bcrypt </li>
-                                <li> Mongoose </li>
-                                <li> Cors </li>
-                                <li> Google Maps/Google Cloud Platform </li>
-                                <li> Twilio </li>
-                                <li> React-calendar </li>
-                            </ul>
-                        </div>
-                        The website has 2 user interfaces for clients and stylists.
-                        
-                        The client side would allow clients to display stylists closest to them by checking HairCo's database.
-                        The client's address would be sent to a google API which would return a latitude and longitude and 
-                        compare it to everything within the database. Retrieved data would then be displayed on an easy to use
-                        Google maps component where clients could view information and choose their preferred stylist.
-                        By selecting the stylist they would be directed to a page that would allow clients to directly contact 
-                        stylists using Twilio - a cloud based service which sends texts. 
+                    <h2 className='haircobutton' onClick={this.openhairco}>  <img src='./Assets/button.jpg' alt='Button Image'/> HairCo </h2>
+                    <div className={this.state.hairco}>
+                        <h2 className='hairco'> <a href='https://hairco.herokuapp.com/'> HairCo </a><p onClick={this.close}> X </p> </h2>
+                        <p>
+                            HairCo is a solo project that was used to explore all facets of a full-stack website.
+                            The aim of the project was to connect clients to stylists in an easy to use application.
+                            The tools used within this application were the following:
+                            <div className='list'>
+                                <ul>
+                                    <li> REACT.js </li>
+                                    <li> Node.js </li>
+                                    <li> Express.js </li>
+                                    <li> REST API </li>
+                                    <li> MongoDB </li>
+                                    <li> JSONWebToken </li>
+                                </ul>
+                                <ul>
+                                    <li> Bcrypt </li>
+                                    <li> Mongoose </li>
+                                    <li> Cors </li>
+                                    <li> Google Maps/Google Cloud Platform </li>
+                                    <li> Twilio </li>
+                                    <li> React-calendar </li>
+                                </ul>
+                            </div>
+                            The website has 2 user interfaces for clients and stylists.
+                            
+                            The client side would allow clients to display stylists closest to them by checking HairCo's database.
+                            The client's address would be sent to a google API which would return a latitude and longitude and 
+                            compare it to everything within the database. Retrieved data would then be displayed on an easy to use
+                            Google maps component where clients could view information and choose their preferred stylist.
+                            By selecting the stylist they would be directed to a page that would allow clients to directly contact 
+                            stylists using Twilio - a cloud based service which sends texts. 
 
-                        The stylist interface would allow stylists to register their information and be stored within HairCo's database.
-                        Using bcrypt HairCo would hash the password and would be saved later for a comparison during login.
-                        Registered information would also include a geolocation and using the google API a latitude and longitude 
-                        would be stored for comparison. Using JSONWebTokens and storing it into LocalSession HairCo would provide authorization and access
-                        to a dashboard for stylists.
+                            The stylist interface would allow stylists to register their information and be stored within HairCo's database.
+                            Using bcrypt HairCo would hash the password and would be saved later for a comparison during login.
+                            Registered information would also include a geolocation and using the google API a latitude and longitude 
+                            would be stored for comparison. Using JSONWebTokens and storing it into LocalSession HairCo would provide authorization and access
+                            to a dashboard for stylists.
 
-                        This project is still in development - the framework is developed and concepts are in place. 
-                    </p>
+                            This project is still in development - the framework is developed and concepts are in place. 
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

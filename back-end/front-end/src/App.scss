@@ -135,10 +135,90 @@ $color5: #41B3A3;
     align-items: center;
     justify-content: space-evenly;
     div{
+      display: flex;
+      flex-direction: column;
       div{
         display: flex;
         flex-direction: column;
         align-items: center;
+        h2{
+          margin-bottom: 100px;
+        }
+        .listybutton{
+          color: #f33;
+          font-family: 'Lobster';
+          background-color: white;
+          padding: 15px;
+          cursor: pointer;
+        }
+        .haircobutton{
+          width: 20vw;
+          border: none;
+          color: rgb(238, 211, 142);
+          font-size: 1.3rem;
+          background: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          outline: none;
+          width: 300px;
+          margin-top: 25px;
+          cursor: pointer;
+          img{
+            position: absolute;
+            z-index: -1;
+            width: 300px;
+          }
+        }
+        .closed{
+          display: none;
+        }
+        .listyOpen{
+          z-index: 10;
+          display: flex;
+          position: fixed;
+          width: 80%;
+          background: $color1;
+          padding: 15px;
+          box-shadow: 10px 10px;
+          border-radius: 10%;
+          h2{
+            width: 100%;
+            display:flex;
+            justify-content: center;
+            p{
+              position: absolute;
+              right: 30px;
+              top: 15px;
+              margin: 0;
+              cursor: pointer;
+            }
+          }
+        }
+        .haircoOpen{
+          z-index: 10;
+          display: flex;
+          position: fixed;
+          top: 175px;
+          width: 80%;
+          background: $color1;
+          padding: 15px;
+          box-shadow: 10px 10px;
+          border-radius: 10%;
+          h2{
+            width: 100%;
+            display:flex;
+            justify-content: center;
+            p{
+              position: absolute;
+              right: 30px;
+              top: 15px;
+              margin: 0;
+              cursor: pointer;
+            }
+          }
+        }
         .hairco{
           margin-bottom: 0;
         }

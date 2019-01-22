@@ -214,6 +214,16 @@
           justify-content: space-evenly;
 }
 
+.home .recentWork div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .home .recentWork div div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,6 +235,118 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.home .recentWork div div h2 {
+  margin-bottom: 100px;
+}
+
+.home .recentWork div div .listybutton {
+  color: #f33;
+  font-family: 'Lobster';
+  background-color: white;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.home .recentWork div div .haircobutton {
+  width: 20vw;
+  border: none;
+  color: #eed38e;
+  font-size: 1.3rem;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  outline: none;
+  width: 300px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.home .recentWork div div .haircobutton img {
+  position: absolute;
+  z-index: -1;
+  width: 300px;
+}
+
+.home .recentWork div div .closed {
+  display: none;
+}
+
+.home .recentWork div div .listyOpen {
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 80%;
+  background: #E27D60;
+  padding: 15px;
+  -webkit-box-shadow: 10px 10px;
+          box-shadow: 10px 10px;
+  border-radius: 10%;
+}
+
+.home .recentWork div div .listyOpen h2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .recentWork div div .listyOpen h2 p {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.home .recentWork div div .haircoOpen {
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 175px;
+  width: 80%;
+  background: #E27D60;
+  padding: 15px;
+  -webkit-box-shadow: 10px 10px;
+          box-shadow: 10px 10px;
+  border-radius: 10%;
+}
+
+.home .recentWork div div .haircoOpen h2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .recentWork div div .haircoOpen h2 p {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  margin: 0;
+  cursor: pointer;
 }
 
 .home .recentWork div div .hairco {
