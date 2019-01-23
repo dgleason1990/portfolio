@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import randomfacts from '../randomfacts';
 
 export default class Home extends Component {
     state={
         listy: 'closed',
-        hairco: 'closed'
+        hairco: 'closed',
+        randomFact: 'No facts yet!'
     }
 
     openListy = ()=>{
@@ -25,7 +27,17 @@ export default class Home extends Component {
         })
     }
 
-    randomFact = ()=>{
+    randomFact = (e)=>{
+        e.preventDefault();
+        let random = () => { 
+            let randomResult = Math.random() * (8-0) + 0;
+            return Math.floor(randomResult); 
+            }  
+        const randomNumber = random();
+        console.log(randomNumber)
+        this.setState({
+            randomFact: randomfacts[randomNumber]
+        })
     }
   render() {
     return (
@@ -166,11 +178,8 @@ export default class Home extends Component {
         </div>
         <div className='funfacts' data-aos='fade-zoom-in' data-aos-duration='1000'> 
             <h1> Some fun facts about me! </h1>
-            <ul>
-                <li> I rode a hippo once </li>  
-                <li> My great grandmother was the first Chinese woman in Ottawa  </li>
-                <li> I volunteered in Guatemala for 2 months at an orphanage </li>
-            </ul>
+            <button onClick={this.randomFact}> Click me for a random fact!</button>
+            <h2> {this.state.randomFact} </h2>
             <h2> For more fun facts feel free to email me! </h2>
         </div>
       </div>
