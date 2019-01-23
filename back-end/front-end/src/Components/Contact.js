@@ -61,6 +61,7 @@ export default class Contact extends Component {
                 Also feel free to call me at 416-994-2941
               </div>
           </div>
+          <div className='submissionBackground'></div>
       </div>
     )
   }

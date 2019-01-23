@@ -1,10 +1,14 @@
-$color1: #E27D60;
-$color2: rgb(149,203,201);
-$color3: #E8A87C;
-$color4: #C38D9E;
-$color5: #41B3A3;
-
-// for color schemes: https://visme.co/blog/website-color-schemes/
+$color1: rgb(217,242,232);
+// #E27D60;
+$color2: rgb(245,248,250);
+// rgb(149,203,201);
+$color3: white;
+// #E8A87C;
+$color4: rgb(217,242,232);
+// #C38D9E;
+$color5: white;
+// #41B3A3;
+// rgb(245,248,250)
 
 // App
 .App{
@@ -19,10 +23,12 @@ $color5: #41B3A3;
   background-color: $color3;
   width: 100vw;
   height: 5vw;
-  color: white;
+  color: black;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  opacity: 1;
+  transition: opacity 2s linear;
   .onHome{
     width: 200px;
     padding-left: 20px;
@@ -32,6 +38,7 @@ $color5: #41B3A3;
     justify-content: center;
     height:100%;
     background-color: black;
+    color: white;
   }
   .notOnHome{
     width: 200px;
@@ -47,6 +54,7 @@ $color5: #41B3A3;
   }
   .notOnHome:hover{
     background-color: black;
+    color: white;
   }
   .onContact{
     width: 200px;
@@ -56,6 +64,7 @@ $color5: #41B3A3;
     align-items: center;
     justify-content: center;
     height:100%;
+    color: white;
     background-color: black;
   }
   .notOnContact{
@@ -72,7 +81,13 @@ $color5: #41B3A3;
   }
   .notOnContact:hover{
       background-color: black;
+      color:white;
   }
+}
+// navbarChanged
+.navbarChanged{
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
 }
 
 //Home
@@ -114,13 +129,13 @@ $color5: #41B3A3;
       div{
         align-items: center;
         width: 300px;
-        border-radius: 10%;
+        border-radius: 30px;
         display: flex;
         flex-direction: column;
         padding: 10px;
         margin-left: 50px;
         margin-right: 50px;
-        background-color: $color5;
+        background-color: $color4;
         img{
           width: 250px;
         }
@@ -151,6 +166,8 @@ $color5: #41B3A3;
           background-color: white;
           padding: 15px;
           cursor: pointer;
+          border: black thin solid;
+          box-shadow: 5px 5px lightgray;
         }
         .haircobutton{
           border-radius: 25%;
@@ -164,7 +181,6 @@ $color5: #41B3A3;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          // outline: none;
           margin-top: 25px;
           cursor: pointer;
           img{
@@ -184,8 +200,8 @@ $color5: #41B3A3;
           width: 80%;
           background: $color1;
           padding: 15px;
-          box-shadow: 10px 10px;
-          border-radius: 10%;
+          box-shadow: 5px 5px lightgrey;
+          border-radius: 25px;
           h2{
             width: 100%;
             display:flex;
@@ -207,8 +223,8 @@ $color5: #41B3A3;
           width: 80%;
           background: $color1;
           padding: 15px;
-          box-shadow: 10px 10px;
-          border-radius: 10%;
+          box-shadow: 5px 5px lightgrey;
+          border-radius: 25px;
           h2{
             width: 100%;
             display:flex;
@@ -246,7 +262,7 @@ $color5: #41B3A3;
 // Contacts Page
 .contact{
   padding-top: 5vw;
-  background: linear-gradient(to right, $color2, $color3);
+  background: linear-gradient(to right, rgb(149,203,201), #E8A87C);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -280,6 +296,15 @@ $color5: #41B3A3;
       margin-top: 25px;
     }
   }
+}
+
+.submissionBackground{
+  position: fixed;
+  top: 100px;
+  opacity: 0.1;
+  background-color: black;
+  width: 700px;
+  height: 450px;
 }
 
 // Animation
