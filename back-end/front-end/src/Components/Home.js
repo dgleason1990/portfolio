@@ -61,43 +61,65 @@ export default class Home extends Component {
         </div>
         <div className='skills' data-aos='fade-zoom-in' data-aos-duration='1000'>
             <h1> Developer Skills </h1>
-            <div>
-                <div data-aos='zoom-in' data-aos-delay='750'>
-                    <img src='/Assets/frontend.png' alt='Front-End'/>
-                    <h2>Front-End Developer</h2>
-                    <ul>
-                        <li> HTML </li>
-                        <li> CSS </li>
-                        <li> SCSS </li>
-                        <li> Javascript </li>
-                        <li> React </li>
-                        <li> Node.js </li>
-                        <li> REST API </li>
-                        <li> GIT </li>
-                    </ul>
+            <div className='skillCard' data-aos='fade-zoom-in' data-aos-delay='750'>
+                <div>
+                    <h3>HTML</h3>
+                    <div>
+                        <img src='/Assets/html5.svg' alt='html5 logo' />
+                        <p> HTML5 </p>
+                        <img src='/Assets/react.svg' alt='jsx logo'/>
+                        <p> JSX </p>
+                    </div>
                 </div>
-                <div data-aos='fade-zoom-in' data-aos-delay='750'>
-                    <img src='/Assets/database.png' alt='Server'/>
-                    <h2>Back-End Developer</h2>
-                    <ul>
-                        <li> Express.js </li>
-                        <li> MySQL </li>
-                        <li> MongoDB </li>
-                        <li> Mongoose </li>
-                        <li> Node.js </li>
-                        <li> REST API </li>
-                        <li> Postman </li>
-                        <li> Database Structures </li>
-                    </ul>
+                <hr />
+                <div>
+                    <h3> CSS </h3>
+                    <div>
+                        <img src='/Assets/css3.svg' alt='css3 logo' />
+                        <p> CSS3 </p>
+                        <img src='/Assets/sass-1.svg' alt='sass logo'/>
+                        <p> SASS </p>
+                    </div>
                 </div>
-                <div data-aos='zoom-in' data-aos-delay='750'>
-                    <img src='/Assets/future.png' alt='Future Logo'/>
-                    <h2>Future Languages</h2>
-                    <ul>
-                        <li>
-                            To be continued...
-                        </li>
-                    </ul>
+                <hr />
+                <div>
+                    <h3> Javascript</h3>
+                    <div>
+                        <img src='/Assets/react.svg' alt='react logo'/>
+                        <p> REACT </p>
+                        <img src='/Assets/nodejs-1.svg' alt='node logo' />
+                        <p> Node.js </p>
+                        <img src='/Assets/webpack.svg' alt='webpack logo' />
+                        <p> Webpack </p>
+                        <img src='/Assets/npm.svg' alt='npm logo' />
+                        <p> NPM </p>
+                    </div>
+                </div>
+                <hr />
+                <div>
+                    <h3> Back-End </h3>
+                    <div>
+                        <img src='/Assets/mongodb.svg' alt='mongodb log' />
+                        <p> MongoDB </p>
+                        <img src='/Assets/mlab-1.svg' alt='mlab logo' />
+                        <p> MLab </p>
+                        <img src='/Assets/mysql.svg' alt='mysql logo' />
+                        <p> MySQL </p>
+                    </div>
+                </div>
+                <hr />
+                <div>
+                    <h3> Other </h3>
+                    <div>
+                        <img src='/Assets/postman.svg' alt='postmamn logo'/>
+                        <p> Postman </p>
+                        <img src='/Assets/github-icon.svg' alt='github logo'/>
+                        <p> Github </p>
+                        <img src='/Assets/visual-studio-code.svg' alt='visual studio code logo' />
+                        <p> Visual Studio Code </p>
+                        <img src='/Assets/heroku.svg' alt='heroku logo'/>
+                        <p> Heroku </p>
+                    </div>
                 </div>
             </div>
         </div>

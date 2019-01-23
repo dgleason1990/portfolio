@@ -180,18 +180,20 @@
           align-items: center;
 }
 
-.home .skills div {
+.home .skills .skillCard {
+  background-color: #d9f2e8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 75%;
+  width: 75%;
+  padding: 30px;
+  border-radius: 30px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.home .skills div div {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 300px;
-  border-radius: 30px;
+.home .skills .skillCard div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,14 +201,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px;
-  margin-left: 50px;
-  margin-right: 50px;
-  background-color: #d9f2e8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.home .skills div div img {
-  width: 250px;
+.home .skills .skillCard div h3 {
+  padding-bottom: 30px;
+}
+
+.home .skills .skillCard div div {
+  border: none;
+}
+
+.home .skills .skillCard div div img {
+  width: 60px;
+}
+
+.home .skills .skillCard hr {
+  margin: 0;
 }
 
 .home .recentWork {
