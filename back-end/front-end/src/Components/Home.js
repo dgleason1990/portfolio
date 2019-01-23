@@ -34,7 +34,6 @@ export default class Home extends Component {
             return Math.floor(randomResult); 
             }  
         const randomNumber = random();
-        console.log(randomNumber)
         this.setState({
             randomFact: randomfacts[randomNumber]
         })
