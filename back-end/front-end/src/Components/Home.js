@@ -103,7 +103,7 @@ export default class Home extends Component {
         </div>
         <div className='recentWork' data-aos='fade-zoom-in' data-aos-duration='1000'>
             <h1> My Recent Work </h1>
-            <h2> All programs work locally - if you would like to download them please visit <a href='​https://github.com/dgleason1990'> ​https://github.com/dgleason1990</a></h2>
+            <h2> All programs work locally and on a computer (responsiveness is to come!) - if you would like to download them please visit <a href='​https://github.com/dgleason1990'> ​https://github.com/dgleason1990</a></h2>
             <div> 
                 <div>
                     <h2 className='listybutton' onClick={this.openListy}> Listy </h2>
