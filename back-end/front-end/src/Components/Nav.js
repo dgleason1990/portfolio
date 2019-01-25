@@ -28,14 +28,12 @@ componentDidMount(){
   let newPos = []; 
   window.addEventListener('scroll', () => {
     newPos.push(window.scrollY);
-    console.log(newPos[0]-window.scrollY)
     if( window.scrollY < 80 ){ 
       this.setState({
         classNameNavbar: 'navbar'
       })
     } 
     else if (newPos[newPos.length-2] < window.scrollY){
-      console.log('yes')
       newPos = [];
       this.setState({
         classNameNavbar: 'navbarChanged'

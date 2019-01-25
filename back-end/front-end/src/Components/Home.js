@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import randomfacts from '../randomfacts';
+import script from '../script';
 
 export default class Home extends Component {
     state={
@@ -27,18 +28,98 @@ export default class Home extends Component {
         })
     }
 
-    randomFact = (e)=>{
-        e.preventDefault();
+    componentDidMount(){
+        let factArr = [];
         let random = () => { 
-            let randomResult = Math.random() * (8-0) + 0;
+            let randomResult = Math.random() * (7-0) + 0;
             return Math.floor(randomResult); 
             }  
-        const randomNumber = random();
-        this.setState({
-            randomFact: randomfacts[randomNumber]
-        })
-    }
+        let randomFact = ()=>{
+            let randomNumber = random();
+            console.log(randomNumber);
+            factArr.push(randomNumber);
+            console.log(factArr);
+            let postedAlready = () => {
+                let result;
+                for(let i = 0 ; i < factArr.length-1; i++){
+                    if(factArr[i] === randomNumber){
+                        result = true
+                        break;
+                    } else {
+                        result = false
+                    }
+                }
+                return result
+            };
+            let checking = (e) => {
+                let result;
+                for(let i = 0 ; i < factArr.length-1; i++){
+                    if(factArr[i] === e){
+                        result = true
+                        break;
+                    } else {
+                        result = false
+                    }
+                }
+                return result
+            };
+            let check = postedAlready();
+            console.log(check)
+            if (factArr.length === 1){
+                this.setState({
+                    randomFact: randomfacts[randomNumber]
+                })
+            }
+            else if (check === false){
+                this.setState({
+                    randomFact: randomfacts[randomNumber]
+                })
+            } 
+            else if (checking(0) === true && checking(1) === true && checking(2) === true && checking(3) === true && checking(4) == true && checking(5)===true && checking(6) === true){
+                this.setState({
+                    randomFact: 'I wish I was more interesting and had more fun facts for you! 😱'
+                })
+            }
+            else randomFact()
+        }
+        document.getElementById('randomFact').addEventListener('click', randomFact)
+    }    
+
+//     randomFact = (e)=>{
+//         e.preventDefault();
+//         let random = () => { 
+//             let randomResult = Math.random() * (7-0) + 0;
+//             return Math.floor(randomResult); 
+//             }  
+//         const randomNumber = random();
+//         this.state.factArr.push(randomNumber);
+//         let postedAlready=()=>{
+//             for(let i=0 ; i<this.state.factArr.length-1 ; i++){
+//                 return i === randomNumber
+//             }
+//         }
+//         let check = postedAlready();
+//         if(check === false){
+//             this.setState({
+//                 randomFact: randomfacts[randomNumber]
+//             })
+//         }
+//         else randomFact()
+// }
+
+    // randomFact = (e)=>{
+    //     e.preventDefault();
+    //     let random = () => { 
+    //         let randomResult = Math.random() * (8-0) + 0;
+    //         return Math.floor(randomResult); 
+    //         }  
+    //     const randomNumber = random();
+    //     this.setState({
+    //         randomFact: randomfacts[randomNumber]
+    //     })
+    // }
   render() {
+      
     return (
       <div className='home'>
         <div className='title' data-aos='fade-zoom-in' data-aos-duration='1000'>
@@ -98,7 +179,7 @@ export default class Home extends Component {
                 <hr />
                 <div>
                     <h3> Back-End </h3>
-                    <div>
+                    <div className='backend'>
                         <img src='/Assets/mongodb.svg' alt='mongodb log' />
                         <p> MongoDB </p>
                         <img src='/Assets/mlab-1.svg' alt='mlab logo' />
@@ -199,7 +280,8 @@ export default class Home extends Component {
         </div>
         <div className='funfacts' data-aos='fade-zoom-in' data-aos-duration='1000'> 
             <h1> Some fun facts about me! </h1>
-            <button onClick={this.randomFact}> Click me for a random fact!</button>
+            <button id='randomFact'> Click me for a random fact!</button>
+            {/* <button id='randomFact' onClick={this.randomFact}> Click me for a random fact!</button> */}
             <h2> {this.state.randomFact} </h2>
             <h2> For more fun facts feel free to email me! </h2>
         </div>

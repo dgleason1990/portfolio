@@ -218,6 +218,10 @@
   width: 60px;
 }
 
+.home .skills .skillCard div .backend img {
+  width: 100px;
+}
+
 .home .skills .skillCard hr {
   margin: 0;
 }
