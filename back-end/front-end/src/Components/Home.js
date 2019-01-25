@@ -30,15 +30,15 @@ export default class Home extends Component {
 
     componentDidMount(){
         let factArr = [];
+        let scriptArr = [];
         let random = () => { 
             let randomResult = Math.random() * (7-0) + 0;
             return Math.floor(randomResult); 
             }  
         let randomFact = ()=>{
+            console.log(scriptArr.length)
             let randomNumber = random();
-            console.log(randomNumber);
             factArr.push(randomNumber);
-            console.log(factArr);
             let postedAlready = () => {
                 let result;
                 for(let i = 0 ; i < factArr.length-1; i++){
@@ -64,7 +64,6 @@ export default class Home extends Component {
                 return result
             };
             let check = postedAlready();
-            console.log(check)
             if (factArr.length === 1){
                 this.setState({
                     randomFact: randomfacts[randomNumber]
@@ -76,48 +75,36 @@ export default class Home extends Component {
                 })
             } 
             else if (checking(0) === true && checking(1) === true && checking(2) === true && checking(3) === true && checking(4) == true && checking(5)===true && checking(6) === true){
-                this.setState({
-                    randomFact: 'I wish I was more interesting and had more fun facts for you! 😱'
-                })
+                if(scriptArr.length === 0){
+                    scriptArr.push(script[0]);
+                    this.setState({
+                        randomFact: 'I wish I was more interesting and had more fun facts for you! 😱'
+                    })
+                } else if (scriptArr.length === 1){
+                    scriptArr.push(script[1]);
+                    this.setState({
+                        randomFact: 'If you keep clicking nothing will happen'
+                    })
+                } else if (scriptArr.length === 2){
+                    scriptArr.push(script[2])
+                    this.setState({
+                        randomFact: 'Alright fine how about some jokes?'
+                    })
+                } else {
+                    fetch('https://geek-jokes.sameerkumar.website/api')
+                    .then(res=>res.json())
+                    .then(data=>{
+                        this.setState({
+                            randomFact: data
+                        })
+                    })
+                }
             }
             else randomFact()
         }
         document.getElementById('randomFact').addEventListener('click', randomFact)
     }    
 
-//     randomFact = (e)=>{
-//         e.preventDefault();
-//         let random = () => { 
-//             let randomResult = Math.random() * (7-0) + 0;
-//             return Math.floor(randomResult); 
-//             }  
-//         const randomNumber = random();
-//         this.state.factArr.push(randomNumber);
-//         let postedAlready=()=>{
-//             for(let i=0 ; i<this.state.factArr.length-1 ; i++){
-//                 return i === randomNumber
-//             }
-//         }
-//         let check = postedAlready();
-//         if(check === false){
-//             this.setState({
-//                 randomFact: randomfacts[randomNumber]
-//             })
-//         }
-//         else randomFact()
-// }
-
-    // randomFact = (e)=>{
-    //     e.preventDefault();
-    //     let random = () => { 
-    //         let randomResult = Math.random() * (8-0) + 0;
-    //         return Math.floor(randomResult); 
-    //         }  
-    //     const randomNumber = random();
-    //     this.setState({
-    //         randomFact: randomfacts[randomNumber]
-    //     })
-    // }
   render() {
       
     return (
