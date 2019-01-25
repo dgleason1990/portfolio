@@ -242,6 +242,30 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 100vw;
+}
+
+.home .recentWork .projects div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 80vw;
+  color: white;
+}
+
+.home .recentWork .projects div a:visited {
+  color: white;
+}
+
+.home .recentWork .projects div img {
+  max-width: 75%;
 }
 
 .home .recentWork div {
@@ -265,123 +289,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.home .recentWork div div h2 {
-  margin-bottom: 100px;
-}
-
-.home .recentWork div div .listybutton {
-  border-radius: 25%;
-  color: #f33;
-  font-family: 'Lobster';
-  background-color: white;
-  padding: 15px;
-  cursor: pointer;
-  border: black thin solid;
-  -webkit-box-shadow: 5px 5px lightgray;
-          box-shadow: 5px 5px lightgray;
-}
-
-.home .recentWork div div .haircobutton {
-  border-radius: 25%;
-  background-color: white;
-  padding: 10px;
-  border: none;
-  color: #eed38e;
-  font-size: 1.3rem;
-  background: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 25px;
-  cursor: pointer;
-}
-
-.home .recentWork div div .haircobutton img {
-  position: absolute;
-  z-index: -1;
-  width: 300px;
-  border-radius: 25%;
-}
-
-.home .recentWork div div .closed {
-  display: none;
-}
-
-.home .recentWork div div .listyOpen {
-  z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  width: 80%;
-  background: #d9f2e8;
-  padding: 15px;
-  -webkit-box-shadow: 5px 5px lightgrey;
-          box-shadow: 5px 5px lightgrey;
-  border-radius: 25px;
-}
-
-.home .recentWork div div .listyOpen h2 {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.home .recentWork div div .listyOpen h2 p {
-  position: absolute;
-  right: 30px;
-  top: 15px;
-  margin: 0;
-  cursor: pointer;
-}
-
-.home .recentWork div div .haircoOpen {
-  z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  top: 250px;
-  width: 80%;
-  background: #d9f2e8;
-  padding: 15px;
-  -webkit-box-shadow: 5px 5px lightgrey;
-          box-shadow: 5px 5px lightgrey;
-  border-radius: 25px;
-}
-
-.home .recentWork div div .haircoOpen h2 {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.home .recentWork div div .haircoOpen h2 p {
-  position: absolute;
-  right: 30px;
-  top: 15px;
-  margin: 0;
-  cursor: pointer;
 }
 
 .home .recentWork div div .hairco {
@@ -416,6 +323,10 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.home .funfacts h2 {
+  max-width: 80vw;
 }
 
 .contact {
@@ -483,6 +394,12 @@
 
 .contact .submission .callMe {
   margin-top: 25px;
+}
+
+#randomFact {
+  width: 200px;
+  height: 65px;
+  border-radius: 25px;
 }
 
 .submissionBackground {

@@ -163,6 +163,22 @@ $color5: white;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    width: 100vw;
+    .projects{
+      div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 80vw;
+        color: white;
+        a:visited{
+          color: white
+        }
+        img{
+          max-width:75%;
+        }
+      }
+    }
     div{
       display: flex;
       flex-direction: column;
@@ -170,88 +186,6 @@ $color5: white;
         display: flex;
         flex-direction: column;
         align-items: center;
-        h2{
-          margin-bottom: 100px;
-        }
-        .listybutton{
-          border-radius: 25%;
-          color: #f33;
-          font-family: 'Lobster';
-          background-color: white;
-          padding: 15px;
-          cursor: pointer;
-          border: black thin solid;
-          box-shadow: 5px 5px lightgray;
-        }
-        .haircobutton{
-          border-radius: 25%;
-          background-color: white;
-          padding: 10px;
-          border: none;
-          color: rgb(238, 211, 142);
-          font-size: 1.3rem;
-          background: none;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          margin-top: 25px;
-          cursor: pointer;
-          img{
-            position: absolute;
-            z-index: -1;
-            width: 300px;
-            border-radius:25%;
-          }
-        }
-        .closed{
-          display: none;
-        }
-        .listyOpen{
-          z-index: 10;
-          display: flex;
-          position: fixed;
-          width: 80%;
-          background: $color1;
-          padding: 15px;
-          box-shadow: 5px 5px lightgrey;
-          border-radius: 25px;
-          h2{
-            width: 100%;
-            display:flex;
-            justify-content: center;
-            p{
-              position: absolute;
-              right: 30px;
-              top: 15px;
-              margin: 0;
-              cursor: pointer;
-            }
-          }
-        }
-        .haircoOpen{
-          z-index: 10;
-          display: flex;
-          position: fixed;
-          top: 250px;
-          width: 80%;
-          background: $color1;
-          padding: 15px;
-          box-shadow: 5px 5px lightgrey;
-          border-radius: 25px;
-          h2{
-            width: 100%;
-            display:flex;
-            justify-content: center;
-            p{
-              position: absolute;
-              right: 30px;
-              top: 15px;
-              margin: 0;
-              cursor: pointer;
-            }
-          }
-        }
         .hairco{
           margin-bottom: 0;
         }
@@ -270,6 +204,9 @@ $color5: white;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    h2{
+      max-width: 80vw;
+    }
   }
 }
 
@@ -310,6 +247,12 @@ $color5: white;
       margin-top: 25px;
     }
   }
+}
+
+#randomFact{
+  width: 200px;
+  height: 65px;
+  border-radius: 25px;
 }
 
 .submissionBackground{
