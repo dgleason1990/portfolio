@@ -116,6 +116,7 @@ export default class Home extends Component {
             <h2> I am a full stack developer that loves what he does!</h2>
             <img src='/Assets/myAvatar.svg' alt='David Gleason'/>
         </div>
+        <div></div>
         <div className='summary' data-aos='fade-zoom-in' data-aos-duration='1000'>
             <h2> Hi there! I'm David, thanks for visiting my page and taking the time to scroll down here!</h2>
             <h3> 
