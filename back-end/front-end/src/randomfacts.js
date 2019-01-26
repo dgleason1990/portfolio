@@ -5,5 +5,5 @@ module.exports=[
     "I've gone scuba diving with turtles 🐢",
     'I rode in a hot air balloon over the Serengeti while the Great Migration was happening 🐃🦓',
     'I saw Justin Trudeau during Pride week',
-    'I once saw Michael Shannon on the streets of Toronto (I almost said hi, next time...)'
+    'I once saw Michael Shannon on the streets of Toronto (I almost said hi... next time...)'
 ]

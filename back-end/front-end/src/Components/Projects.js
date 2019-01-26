@@ -77,7 +77,7 @@ export default class Projects extends Component {
             </p>
           </div>
           <div>
-            <h2> All programs work locally and on a computer (responsiveness is to come!) - if you would like to download them please visit <a href='​https://github.com/dgleason1990'> ​https://github.com/dgleason1990</a></h2> 
+            <h2> All programs work when hosted locally (responsiveness is to come!) - if you would like to download them please visit <a href='​https://github.com/dgleason1990'> ​https://github.com/dgleason1990</a></h2> 
           </div> 
         </Carousel> 
       </div>
