@@ -5,9 +5,9 @@ export default class Projects extends Component {
   render() {
     return (
       <div className='projects'> 
-        <Carousel autoPlay>
+        <Carousel autoPlay infiniteLoop>
           <div>
-            <img src='./Assets/Hairco.png'/>
+            <img src='./Assets/Listy.png'/>
           </div>
           <div>
             <h2> Listy </h2>
@@ -31,7 +31,7 @@ export default class Projects extends Component {
             </p>
           </div>
           <div>
-            <img src='./Assets/Listy.png'/>
+            <img src='./Assets/Hairco.png'/>
           </div>
           <div>
             <h2 className='hairco'> HairCo </h2>
