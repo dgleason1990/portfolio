@@ -25,7 +25,7 @@ $color5: white;
   box-shadow: 0 0 3px black;
   background-color: $color3;
   width: 100vw;
-  height: 5vw;
+  height: 60px;
   color: black;
   display: flex;
   justify-content: flex-start;
@@ -95,7 +95,7 @@ $color5: white;
 
 //Home
 .home{
-  padding-top: 5vw;
+  padding-top: 60px;
   .title{
     height: 100vh;
     background-color: $color2;

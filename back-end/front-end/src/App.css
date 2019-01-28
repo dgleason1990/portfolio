@@ -10,7 +10,7 @@
           box-shadow: 0 0 3px black;
   background-color: white;
   width: 100vw;
-  height: 5vw;
+  height: 60px;
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,7 +117,7 @@
 }
 
 .home {
-  padding-top: 5vw;
+  padding-top: 60px;
 }
 
 .home .title {
