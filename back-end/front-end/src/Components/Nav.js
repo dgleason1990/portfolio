@@ -39,7 +39,7 @@ componentDidMount(){
         classNameNavbar: 'navbarChanged'
       })
     }
-    else if ((newPos[0] - window.scrollY) > 50 ){
+    else if ((newPos[0] - window.scrollY) > 500 ){
       this.setState({
         classNameNavbar: 'navbar'
         })

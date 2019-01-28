@@ -29,8 +29,16 @@ export default class Home extends Component {
             hairco: 'closed'
         })
     }
-
+    
+    //Scroll button
+    scrollToTop = () => {
+        console.log('triggered')
+        let elmnt = document.getElementById("recentWork");
+        elmnt.scrollIntoView(true); // Top
+    }
+    
     componentDidMount(){
+        // random fact button
         let factArr = [];
         let scriptArr = [];
         let random = () => { 
@@ -104,7 +112,7 @@ export default class Home extends Component {
             }
             else randomFact()
         }
-        document.getElementById('randomFact').addEventListener('click', randomFact)
+        document.getElementById('randomFact').addEventListener('click', randomFact);
     }    
 
   render() {
@@ -112,23 +120,31 @@ export default class Home extends Component {
     return (
       <div className='home'>
         <div className='title' data-aos='fade-zoom-in' data-aos-duration='1000'>
-            <h1> Web Developer Extraordinaire </h1>
-            <h2> I am a full stack developer that loves what he does!</h2>
-            <img src='/Assets/myAvatar.svg' alt='David Gleason'/>
+            <h1> Welcome to David Gleason's Portfolio Page! </h1>
+            <h2> I am a full stack developer in Toronto, Ontario </h2>
+            <div className='seeRecent' onClick={this.scrollToTop}> See my Recent Work </div>
+            <div>
+                <a href='www.linkedin.com/in/davidjdgleason'> 
+                    <img className='socialMedia' src='/Assets/linkedin-icon.svg' alt='LinkedIn Icon'/>
+                </a>
+                <a href='https://github.com/dgleason1990'> 
+                    <img className='socialMedia' src='/Assets/github-1.svg' alt='Github Icon' />
+                </a>
+            </div>
+            <img className='avatar' src='/Assets/profilePicture.PNG' alt='David Gleason'/>
         </div>
-        <div></div>
         <div className='summary' data-aos='fade-zoom-in' data-aos-duration='1000'>
-            <h2> Hi there! I'm David, thanks for visiting my page and taking the time to scroll down here!</h2>
-            <h3> 
-                Since you're down here reading here's a bit about me: <br/>
-                I started my journey as a web developer in 2018.
-                I had been in the workforce for a few years after University and wanted to seperate myself from the rest of the working force
-                with a technical skill. After much consideration and a bit of back and forth between programs I chose web development! (Yay!)
+            <h2> Hi there! I'm David, thanks for visiting my page and taking the time to scroll down here.</h2>
+            <p> 
+                I started my journey as a web developer in 2018 by fully committing myself to learning Web Development at Brainstation in Toronto.
+                After having multiple roles in sales in marketing after University I decided I wanted to seperate myself from the
+                rest of the working force with a technical skill.
+                After much consideration and a bit of back and forth between programs I chose web development!
                 What's more difficult and technical than programming? Am I right?
                 I've always loved computers and dabbled here and there with programming at computer camp, who needs the outdoors anyways?
                 Now that I'm all grown up with my Ryerson University degree under my belt and a web development diploma I'm ready to take on the world! 
                 On this site you can find some previous projects that I've worked on. In the top left corner you can reach me.
-            </h3>
+            </p>
         </div>
         <div className='skills' data-aos='fade-zoom-in' data-aos-duration='1000'>
             <h1> Developer Skills </h1>
@@ -194,9 +210,15 @@ export default class Home extends Component {
                 </div>
             </div>
         </div>
-        <div className='recentWork' data-aos='fade-zoom-in' data-aos-duration='1000'>
+        <div id='recentWork' data-aos='fade-zoom-in' data-aos-duration='1000'>
             <h1> My Recent Work </h1>
             <Projects />
+        </div>
+        <div className='background'>
+            <video autoPlay muted loop>
+                <source src="/Assets/skyline.mp4" type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div className='funfacts' data-aos='fade-zoom-in' data-aos-duration='1000'> 
             <h1> Some fun facts about me! </h1>

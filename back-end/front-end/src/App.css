@@ -1,4 +1,5 @@
 .App {
+  font-family: 'Oswald', sans-serif;
   background-image: url("https://images.unsplash.com/photo-1535776142635-8fa180c46af7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2756&q=80");
 }
 
@@ -21,8 +22,8 @@
       -ms-flex-align: center;
           align-items: center;
   opacity: 1;
-  -webkit-transition: opacity 2s linear;
-  transition: opacity 2s linear;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
 }
 
 .navbar .onHome {
@@ -111,8 +112,8 @@
 
 .navbarChanged {
   opacity: 0;
-  -webkit-transition: visibility 0s 2s, opacity 2s linear;
-  transition: visibility 0s 2s, opacity 2s linear;
+  -webkit-transition: visibility 0s 1s, opacity 1s linear;
+  transition: visibility 0s 1s, opacity 1s linear;
 }
 
 .home {
@@ -129,20 +130,45 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
-.home .title img {
-  width: 25%;
-  border-radius: 100%;
+.home .title h1 {
+  margin-top: 2vw;
+  margin-left: 2vw;
+}
+
+.home .title h2 {
+  margin-left: 2vw;
+}
+
+.home .title .seeRecent {
+  margin: 2vw;
+  width: 125px;
+  padding: 5px;
+  border: black thin solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.home .title .socialMedia {
+  margin-left: 2vw;
+  width: 50px;
+  height: 50px;
+}
+
+.home .title .avatar {
+  position: absolute;
+  margin-top: 5vw;
+  margin-right: 10vw;
+  top: 0;
+  right: 0;
+  border-radius: 250px;
 }
 
 .home .summary {
-  background-color: white;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,7 +185,7 @@
           justify-content: center;
 }
 
-.home .summary h3 {
+.home .summary p {
   margin-left: 10vw;
   margin-right: 10vw;
   margin-top: 5vw;
@@ -168,6 +194,7 @@
 .home .skills {
   height: 100vh;
   background-color: #f5f8fa;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,7 +253,7 @@
   margin: 0;
 }
 
-.home .recentWork {
+.home #recentWork {
   background-color: white;
   height: 100vh;
   display: -webkit-box;
@@ -245,7 +272,7 @@
   width: 100vw;
 }
 
-.home .recentWork .projects div {
+.home #recentWork .projects div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -260,15 +287,15 @@
   color: white;
 }
 
-.home .recentWork .projects div a:visited {
+.home #recentWork .projects div a:visited {
   color: white;
 }
 
-.home .recentWork .projects div img {
+.home #recentWork .projects div img {
   max-width: 75%;
 }
 
-.home .recentWork div {
+.home #recentWork div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,7 +305,7 @@
           flex-direction: column;
 }
 
-.home .recentWork div div {
+.home #recentWork div div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -291,11 +318,11 @@
           align-items: center;
 }
 
-.home .recentWork div div .hairco {
+.home #recentWork div div .hairco {
   margin-bottom: 0;
 }
 
-.home .recentWork div div .list {
+.home #recentWork div div .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,9 +334,22 @@
       justify-content: space-around;
 }
 
+.home .background {
+  width: 100vw;
+  opacity: 0.75;
+  position: absolute;
+}
+
+.home .background video {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100vw;
+}
+
 .home .funfacts {
   height: 100vh;
-  background-color: #f5f8fa;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,6 +440,7 @@
   width: 200px;
   height: 65px;
   border-radius: 25px;
+  font-size: 1rem;
 }
 
 .submissionBackground {
