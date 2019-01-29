@@ -32,7 +32,6 @@ export default class Home extends Component {
     
     //Scroll button
     scrollToTop = () => {
-        console.log('triggered')
         let elmnt = document.getElementById("recentWork");
         elmnt.scrollIntoView(true); // Top
     }
@@ -120,16 +119,18 @@ export default class Home extends Component {
     return (
       <div className='home'>
         <div className='title' data-aos='fade-zoom-in' data-aos-duration='1000'>
-            <h1> Welcome to David Gleason's Portfolio Page! </h1>
-            <h2> I am a full stack developer in Toronto, Ontario </h2>
-            <div className='seeRecent' onClick={this.scrollToTop}> See my Recent Work </div>
             <div>
-                <a href='www.linkedin.com/in/davidjdgleason'> 
-                    <img className='socialMedia' src='/Assets/linkedin-icon.svg' alt='LinkedIn Icon'/>
-                </a>
-                <a href='https://github.com/dgleason1990'> 
-                    <img className='socialMedia' src='/Assets/github-1.svg' alt='Github Icon' />
-                </a>
+                <h1> Welcome to David Gleason's Portfolio Page! </h1>
+                <h2> I am a full stack developer in Toronto, Ontario </h2>
+                <div className='seeRecent' onClick={this.scrollToTop}> See my Recent Work </div>
+                <div className='socialMedia'>
+                    <a href='https://www.linkedin.com/in/davidjdgleason'> 
+                        <img  src='/Assets/linkedin-icon.svg' alt='LinkedIn Icon'/>
+                    </a>
+                    <a href='https://github.com/dgleason1990'> 
+                        <img src='/Assets/github-1.svg' alt='Github Icon' />
+                    </a>
+                </div>
             </div>
             <img className='avatar' src='/Assets/profilePicture.PNG' alt='David Gleason'/>
         </div>
@@ -137,7 +138,7 @@ export default class Home extends Component {
             <h2> Hi there! I'm David, thanks for visiting my page and taking the time to scroll down here.</h2>
             <p> 
                 I started my journey as a web developer in 2018 by fully committing myself to learning Web Development at Brainstation in Toronto.
-                After having multiple roles in sales in marketing after University I decided I wanted to seperate myself from the
+                After having multiple roles in sales and marketing after University I decided I wanted to seperate myself from the
                 rest of the working force with a technical skill.
                 After much consideration and a bit of back and forth between programs I chose web development!
                 What's more difficult and technical than programming? Am I right?

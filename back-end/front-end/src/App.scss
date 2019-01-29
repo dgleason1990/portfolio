@@ -100,36 +100,35 @@ $color5: white;
     height: 100vh;
     background-color: $color2;
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    h1{
-      margin-top: 2vw;
-      margin-left: 2vw;
-    }
-    h2{
-      margin-left: 2vw;
-    }
-    .seeRecent{
-      margin:2vw;
-      width: 125px;
-      padding: 5px;
-      border: black thin solid;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .socialMedia{
-      margin-left: 2vw;
-      width: 50px;
-      height: 50px;
+    justify-content: space-around;
+    align-items: flex-start;
+    div{
+      margin-right: 5vw;
+      margin-top: 5vw;
+      .seeRecent{
+        width: 125px;
+        padding: 5px;
+        border: black thin solid;
+        border-radius: 10px;
+        transition: 0.6s;
+        cursor: pointer;
+        &:hover{
+          background-color: black;
+          color: white;
+
+        }
+      }
+      .socialMedia{
+        img{
+        padding-right: 25px;
+        width: 50px;
+        height: 50px;
+        }
+      }
     }
     .avatar{
-      position: absolute;
       margin-top: 5vw;
-      margin-right: 10vw;
-      top: 0;
-      right: 0;
-      // width: 25%;
-      border-radius: 250px;
+      object-fit: contain;
     }
   }
   .summary{
@@ -257,6 +256,7 @@ $color5: white;
   .submission{
     margin-top: 8vw;
     position: absolute;
+    z-index: 10;
     p{
       margin: 0;
     }
