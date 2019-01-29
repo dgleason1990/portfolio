@@ -141,10 +141,14 @@ export default class Home extends Component {
                 After having multiple roles in sales and marketing after University I decided I wanted to seperate myself from the
                 rest of the working force with a technical skill.
                 After much consideration and a bit of back and forth between programs I chose web development!
-                What's more difficult and technical than programming? Am I right?
+                Can I ask you - what's more difficult and technical than programming? Am I right?
                 I've always loved computers and dabbled here and there with programming at computer camp, who needs the outdoors anyways?
-                Now that I'm all grown up with my Ryerson University degree under my belt and a web development diploma I'm ready to take on the world! 
-                On this site you can find some previous projects that I've worked on. In the top left corner you can reach me.
+                Now that I'm all grown up with my Ryerson University Bachelor of Commerce Degree under my belt and a Web Development Diploma I'm ready to take on the world! 
+                My current background includes full-stack development using REACT for front-end, Express for the back-end, and MongoDB/MySQL for database management.
+                I also use Node.JS for packages and modules.
+                <br/>
+                <hr/>
+                On this site you can find an updated list of skills I've acquired and previous projects that I've worked on. In the top left corner you can reach me and at the bottom you can find some random facts about me!
             </p>
         </div>
         <div className='skills' data-aos='fade-zoom-in' data-aos-duration='1000'>
