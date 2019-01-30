@@ -33,7 +33,6 @@ export default class Contact extends Component {
       body: JSON.stringify(this.state),
       headers: {"content-type": "application/json"}
     }
-    // https://david-gleasons-portfolio.herokuapp.com
     fetch('https://david-gleasons-portfolio.herokuapp.com/contact', init)
     .then(res=>console.log(res))
     .catch(err=> console.log(err))
@@ -55,7 +54,7 @@ export default class Contact extends Component {
                   </div>
                 </div>
                   Message: <textarea className='message' onChange={this.handleMessage} />
-                <button onClick={this.handleSubmission}> Submit </button>
+                <div className='button' onClick={this.handleSubmission}> Submit </div>
               </form>
               <div className='callMe'>
                 Also feel free to call me at 416-994-2941

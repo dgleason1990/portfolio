@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .App {
   font-family: 'Oswald', sans-serif;
   background-image: url("https://images.unsplash.com/photo-1535776142635-8fa180c46af7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2756&q=80");
@@ -145,7 +146,7 @@
 }
 
 .home .title div .seeRecent {
-  width: 125px;
+  width: 145px;
   padding: 5px;
   border: black thin solid;
   border-radius: 10px;
@@ -157,6 +158,10 @@
 .home .title div .seeRecent:hover {
   background-color: black;
   color: white;
+}
+
+.home .title div .seeRecent:hover:after {
+  content: ' ↓';
 }
 
 .home .title div .socialMedia img {
@@ -452,6 +457,27 @@
 .contact .submission form .message {
   width: 100%;
   height: 100px;
+  resize: none;
+}
+
+.contact .submission form .button {
+  margin-top: 10px;
+  background-color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.contact .submission form .button:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: white;
+  background-color: black;
+}
+
+.contact .submission form .button:hover:after {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  content: ' 📨';
 }
 
 .contact .submission .callMe {

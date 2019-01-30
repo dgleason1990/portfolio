@@ -109,7 +109,7 @@ $color5: white;
       margin-right: 5vw;
       margin-top: 5vw;
       .seeRecent{
-        width: 125px;
+        width: 145px;
         padding: 5px;
         border: black thin solid;
         border-radius: 10px;
@@ -118,8 +118,13 @@ $color5: white;
         &:hover{
           background-color: black;
           color: white;
-
+          &:after{
+            content:' ↓'
+          }
         }
+        // &:hover:after{
+        //   content:' ↓'
+        // }
       }
       .socialMedia{
         img{
@@ -294,6 +299,22 @@ $color5: white;
       .message{
         width: 100%;
         height: 100px;
+        resize: none;
+      }
+      .button{
+        margin-top: 10px;
+        background-color: white;
+        padding: 5px;
+        cursor: pointer;
+        &:hover{
+          transition: 0.4s;
+          color: white;
+          background-color: black;
+        }
+        &:hover:after{
+          transition: 0.4s;
+          content: ' 📨';
+        }
       }
     }
     .callMe{
