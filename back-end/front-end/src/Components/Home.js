@@ -135,7 +135,10 @@ export default class Home extends Component {
             <img className='avatar' src='/Assets/profilePicture.PNG' alt='David Gleason'/>
         </div>
         <div className='summary' data-aos='fade-zoom-in' data-aos-duration='1000'>
-            <h2> Hi there! I'm David, thanks for visiting my page and taking the time to scroll down here.</h2>
+            <div>
+                <h2> Hi there! I'm David, thanks for visiting my page and taking the time to scroll down here. This is my story. </h2>
+                <img src='/Assets/computerImage.jpg' alt='computer image'/>
+            </div>
             <p> 
                 I started my journey as a web developer in 2018 by fully committing myself to learning Web Development at Brainstation in Toronto.
                 After having multiple roles in sales and marketing after University I decided I wanted to seperate myself from the
@@ -153,7 +156,7 @@ export default class Home extends Component {
         </div>
         <div className='skills' data-aos='fade-zoom-in' data-aos-duration='1000'>
             <h1> Developer Skills </h1>
-            <div className='skillCard' data-aos='fade-zoom-in' data-aos-delay='750'>
+            <div className='skillCard' data-aos='fade-zoom-in' data-aos-delay='500'>
                 <div>
                     <h3>HTML</h3>
                     <div>

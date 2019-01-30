@@ -22,8 +22,8 @@
       -ms-flex-align: center;
           align-items: center;
   opacity: 1;
-  -webkit-transition: opacity 1s linear;
-  transition: opacity 1s linear;
+  -webkit-transition: opacity 0.4s linear;
+  transition: opacity 0.4s linear;
   width: 100%;
 }
 
@@ -113,11 +113,12 @@
 
 .navbarChanged {
   opacity: 0;
-  -webkit-transition: visibility 0s 1s, opacity 1s linear;
-  transition: visibility 0s 1s, opacity 1s linear;
+  -webkit-transition: visibility 1s, opacity 1s linear;
+  transition: visibility 1s, opacity 1s linear;
 }
 
 .home {
+  background-color: white;
   padding-top: 60px;
 }
 
@@ -132,6 +133,10 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .home .title div {
@@ -167,7 +172,18 @@
 }
 
 .home .summary {
+  padding: 5vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home .summary div {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,15 +194,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.home .summary div h2 {
+  width: 90%;
+}
+
+.home .summary div img {
+  width: 95%;
+  -webkit-clip-path: ellipse(95% 100% at 10% 5%);
+          clip-path: ellipse(95% 100% at 10% 5%);
 }
 
 .home .summary p {
-  margin-left: 10vw;
-  margin-right: 10vw;
-  margin-top: 5vw;
+  font-size: 1.5rem;
+  margin-left: 20px;
+  width: 75%;
 }
 
 .home .skills {
@@ -502,7 +525,13 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: 100vw;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home .summary h2 {
+    width: 90%;
   }
   .home .skills {
     display: -webkit-box;
@@ -563,6 +592,13 @@
   .home .background video {
     height: 100%;
     width: unset;
+  }
+  .contact .submission {
+    width: 90%;
+  }
+  .contact .submissionBackground {
+    width: 95%;
+    top: auto;
   }
 }
 /*# sourceMappingURL=App.css.map */
