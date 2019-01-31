@@ -1,4 +1,25 @@
 @charset "UTF-8";
+@-webkit-keyframes moveDown {
+  0% {
+    position: relative;
+    bottom: 500px;
+  }
+  100% {
+    position: relative;
+    bottom: 0px;
+  }
+}
+@keyframes moveDown {
+  0% {
+    position: relative;
+    bottom: 500px;
+  }
+  100% {
+    position: relative;
+    bottom: 0px;
+  }
+}
+
 .App {
   font-family: 'Oswald', sans-serif;
   background-image: url("https://images.unsplash.com/photo-1535776142635-8fa180c46af7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2756&q=80");
@@ -145,6 +166,20 @@
   margin-top: 5vw;
 }
 
+.home .title div h1 {
+  -webkit-animation-name: moveDown;
+          animation-name: moveDown;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.home .title div h2 {
+  -webkit-animation-name: moveDown;
+          animation-name: moveDown;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
 .home .title div .seeRecent {
   width: 145px;
   padding: 5px;
@@ -202,6 +237,10 @@
 }
 
 .home .summary div h2 {
+  -webkit-animation-name: moveDown;
+          animation-name: moveDown;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   width: 90%;
 }
 
@@ -409,6 +448,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1.5rem;
 }
 
 .contact .submission {
@@ -493,11 +533,11 @@
 
 .submissionBackground {
   position: fixed;
-  top: 100px;
+  top: 150px;
   opacity: 0.1;
   background-color: black;
-  width: 700px;
-  height: 450px;
+  width: 900px;
+  height: 55s0px;
 }
 
 .particles {
