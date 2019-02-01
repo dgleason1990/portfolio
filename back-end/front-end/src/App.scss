@@ -114,6 +114,9 @@ $color5: white;
         animation-name: moveDown;
         animation-duration: 2s;
       }
+      #code{
+        height: 50px;
+      }
       .seeRecent{
         width: 145px;
         padding: 5px;
@@ -253,7 +256,7 @@ $color5: white;
   }  
   .background{
     width: 100vw;
-    opacity: 0.75;
+    opacity: 0.9;
     position: absolute;
     video{
       object-fit: fill;
@@ -430,8 +433,8 @@ $color5: white;
     }
     .background{
       video{
-        height: 100%;
-        width: unset;
+        height: 200vw;
+        width: 100%;
       }
     }
   }

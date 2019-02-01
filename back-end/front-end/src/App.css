@@ -180,6 +180,10 @@
           animation-duration: 2s;
 }
 
+.home .title div #code {
+  height: 50px;
+}
+
 .home .title div .seeRecent {
   width: 145px;
   padding: 5px;
@@ -404,7 +408,7 @@
 
 .home .background {
   width: 100vw;
-  opacity: 0.75;
+  opacity: 0.9;
   position: absolute;
 }
 
@@ -659,8 +663,8 @@
     max-width: 100%;
   }
   .home .background video {
-    height: 100%;
-    width: unset;
+    height: 200vw;
+    width: 100%;
   }
   .contact .submission {
     width: 90%;

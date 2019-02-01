@@ -8,56 +8,45 @@ export default class Title extends Component {
     elmnt.scrollIntoView(true);
     }
 
-    // componentDidMount(){
-    //     let wordArr = ['programmer', 'testing']
-    //     let newWordArr = 'test';
-    //     let word = [];
-    //     let newWord = [''];
+    componentDidMount(){
+        let wordArr = ['Welcome to My Page', 'Pleasure to have you here', 'Want to talk?', 'Contact me above', '&']
+        let word = []
+        let newWord ='&&';
    
-    //     setInterval(function(){
-    //         let code = document.getElementById('code').innerHTML;
-    //         console.log(newWordArr);
-    //         console.log(newWord)
-    //         let pushy = setInterval(function(){
-    //             let index = newWord.length-1;
-    //             if (newWord[newWord.length-1] === newWordArr[newWordArr.length-1]){
-    //                 newWord.push()
-    //             }
-    //         }, 1000 )
-    //         // let pushFunction = (arr) => {
-    //         //     console.log(newWord[0] !== arr[0])
-    //         //     for( let i=0 ; i<newWord.length ; i++){
-    //         //         if (newWord[i] !== arr[i]){
-    //         //             console.log('hi');
-    //         //             newWord.push(arr[i])
-    //         //             setTimeout(100)
-    //         //         } 
-    //         //     }
-    //         // }
-
-    //         if(newWordArr === 'test'){
-    //             newWordArr = wordArr[0].split('');
-    //             document.getElementById('code').innerHTML = pushFunction(newWordArr);
-    //             // newWord.push(newWordArr[0]);
-    //         } else if ( newWord === 'programmer'){
-
-    //         }
-        
-    //         // for(let i=0;i<wordArr.length-1;i++){
-    //         //     newWordArr = wordArr[i].split('');
-    //         //     console.log('newWordArr');
-    //         //     setTimeout(1000);
-    //         // }
-    //         // console.log(newWordArr)
-    //         // if(code === 'test'){
-    //         //     document.getElementById('code').innerHTML = newWordArr[0];
-    //         //     newWord.push(newWordArr[0]);
-    //         // } else if (code === 'p'){
-    //         //     document.getElementById('code').innerHTML = newWord.join()
-    //         // }
-    //     }
-    //     , 1000)
-    // }
+        setInterval(function(){
+            let pushWord = ()=>{
+                if(word === undefined){
+                    return word.push(newWord[0])
+                }
+                else if(newWord.length !== word.length){
+                    return word.push(newWord[word.length])
+                }
+            };
+            let checkIndex = ()=>{
+                for(let i=0; i<wordArr.length-1; i++){
+                    if(i === wordArr.length-2){
+                        console.log('falsee')
+                        newWord = wordArr[0].split('');
+                    }
+                    else if(wordArr[i] === newWord.join('')){
+                        newWord = wordArr[i+1].split('');
+                        break;
+                    }
+                }
+            };
+            if (newWord === '&&'){
+                newWord = wordArr[0].split('');
+            } else if ( word.join() !== newWord.join()){
+                pushWord();
+                document.getElementById('code').innerHTML = word.join('') + '|';
+            } else {
+                word = [];
+                checkIndex();
+                pushWord();
+                document.getElementById('code').innerHTML = word.join('');
+            }
+        }, 250)
+    }
 
   render() {
     return (
