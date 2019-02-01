@@ -24,7 +24,6 @@ export default class Title extends Component {
                 let checkIndex = ()=>{
                     for(let i=0; i<wordArr.length-1; i++){
                         if(i === wordArr.length-2){
-                            console.log('falsee')
                             newWord = wordArr[0].split('');
                         }
                         else if(wordArr[i] === newWord.join('')){
@@ -46,7 +45,6 @@ export default class Title extends Component {
                     }
                 }
             , 250)
-            console.log(this.intervalId)
         }
 
         componentWillUnmount(){
