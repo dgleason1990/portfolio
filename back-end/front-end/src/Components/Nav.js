@@ -12,7 +12,7 @@ onHomeChange=()=>{
     this.setState({
       classNameHome: 'onHome',
       classNameContact: 'notOnContact'
-    })
+    });
   this.props.history.push('/home')
 }
 
@@ -20,8 +20,8 @@ onContactChange=()=>{
     this.setState({
       classNameContact: 'onContact',
       classNameHome: 'notOnHome'
-    })
-  this.props.history.push('/contact')
+    });
+    this.props.history.push('/contact')
 }
 
 componentDidMount(){

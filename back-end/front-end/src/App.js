@@ -11,13 +11,14 @@ class App extends Component {
   componentDidMount(){
     AOS.init();
   }
+
   render() { 
     return (
       <div className="App">
-      <Nav />
+      <Nav typingOff={this.typingOff} typingOn={this.typingOn}/>
         <Switch>
           <Route exact path='/' render={()=><Redirect to='/home'/>}/>
-          <Route path='/home'component={Home}/>
+          <Route path='/home' component={Home}/>
           <Route path='/contact' component={Contact}/>
         </Switch>
       </div>
