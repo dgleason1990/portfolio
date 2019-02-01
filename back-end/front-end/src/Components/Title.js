@@ -76,7 +76,7 @@ export default class Title extends Component {
                 </a>
             </div>
         </div>
-        <img className='avatar' src='/Assets/profilePicture.PNG' alt='David Gleason'/>
+        <img className='avatar' src='/Assets/profilePicture.jpg' alt='David Gleason'/>
     </div>
     )
   }

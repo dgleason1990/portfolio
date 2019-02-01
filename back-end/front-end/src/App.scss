@@ -138,7 +138,9 @@ $color5: white;
       }
     }
     .avatar{
-      margin-top: 5vw;
+      box-shadow: 15px 15px $color1;
+      margin-top: 1vw;
+      width: 35%;
       object-fit: contain;
     }
   }
@@ -342,7 +344,7 @@ $color5: white;
   opacity: 0.1;
   background-color: black;
   width: 900px;
-  height: 55s0px;
+  height: 550px;
 }
 
 // Animation

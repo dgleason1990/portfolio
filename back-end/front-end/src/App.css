@@ -206,7 +206,10 @@
 }
 
 .home .title .avatar {
-  margin-top: 5vw;
+  -webkit-box-shadow: 15px 15px #d9f2e8;
+          box-shadow: 15px 15px #d9f2e8;
+  margin-top: 1vw;
+  width: 35%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -537,7 +540,7 @@
   opacity: 0.1;
   background-color: black;
   width: 900px;
-  height: 55s0px;
+  height: 550px;
 }
 
 .particles {
