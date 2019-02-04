@@ -536,6 +536,12 @@
   height: 65px;
   border-radius: 25px;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+#randomFact:hover {
+  background-color: black;
+  color: white;
 }
 
 .submissionBackground {

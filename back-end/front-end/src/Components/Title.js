@@ -9,7 +9,7 @@ export default class Title extends Component {
     }
     
     componentDidMount(){
-        let wordArr = ['Welcome to My Page', 'Pleasure to have you here', 'Want to talk?', 'Contact me above', '&']
+        let wordArr = ['Welcome to my page', 'Pleasure to have you here', 'Want to talk?', 'Contact me above', '&']
         let word = []
         let newWord ='&&';
         this.intervalId = setInterval(function(){
